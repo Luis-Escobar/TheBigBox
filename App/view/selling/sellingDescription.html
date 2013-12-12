@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>sellingDescription</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<link rel="stylesheet" href="../../css/jquery.mobile-1.3.1.css" />
+		<link  rel="stylesheet" type="text/css" href="../../css/custom.css"/>
+		<script src="../../js/jquery-1.10.2.js"></script>
+		<script src="../../js/jquery.mobile-1.3.1.js"></script>
+		<script src="../../appjs/item.js"></script>
+		<script src="../../appjs/app.js"></script>
+	</head>
+	<body>
+
+		<div id ="" data-role="page">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<a data-role="button" data-rel="back"> Back </a>
+				<h1 id = "">Set Description</h1>
+			</div>
+
+			<div data-role="content" data-inset="true">
+
+				<form>
+
+					<h3>Description</h3>
+
+					<div data-role="fieldcontain">
+
+						<div data-role="fieldcontain">
+							<input   type="text" id="newSellDescription" placeholder="Description"  />
+						</div>
+
+					</div>
+
+					<div align="left">
+						<input type="button" onclick="getDescription4Sell()"  data-inline="true" data-theme="b" value="Done"/>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</body>
+</html>

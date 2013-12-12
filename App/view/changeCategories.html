@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Big Box change Categories</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/jquery.mobile-1.3.1.css" />
+		<link  rel="stylesheet" type="text/css" href="../css/custom.css"/>
+		
+		<script src="../js/jquery-1.10.2.js"></script>
+		<script src="../js/jquery.mobile-1.3.1.js"></script>
+		<script src="../appjs/item.js"></script>
+		<script src="../appjs/app.js"></script>
+		<script src="../raty/jquery.raty.min.js"></script>
+		<script src="../raty/jquery.raty.js"></script>
+		
+	</head>
+	<body>
+		<!-- homepage -->
+
+		<div data-role="page" id= "changecategories">
+			<div data-role="header">
+				<a data-role="button" data-rel="back"> Back </a>
+				<h1>Cat Changer</h1>
+			</div><!-- /header -->
+			<!-- /content -->
+			<div data-role="content">
+				<h4>Search the category:</h4>
+			<ul id="changecategorylist" data-role="listview" data-inset="true"  data-filter="true" data-filter-placeholder="Search ...">	
+					Select a category to edit:
+			</ul>
+			
+			<label>Edit here:</label>		
+			<input type="text" value="click a button">
+			<a data-role="button"  style="width: 50%;left: 25%" data-theme="b" onclick="confirmChange()">Change</a>
+	</body>
+</html>

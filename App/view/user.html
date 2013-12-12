@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<title>User</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/jquery.mobile-1.3.1.css" />
+		<link  rel="stylesheet" type="text/css" href="../css/custom.css"/>
+		<script src="/App/js/jquery-1.10.2.js"></script>
+		<script src="/App/js/jquery.mobile-1.3.1.js"></script>
+		<script src="/App/appjs/item.js"></script>
+		<script src="/App/appjs/app.js"></script>
+		<script src="/App/raty/jquery.raty.min.js"></script>
+		<script src="/App/raty/jquery.raty.js"></script>
+	</head>
+	<body>
+		<!-- homepage -->
+		<div data-role="page" id="home">
+			<div class="user_header" data-role="header" data-nobackbtn="true">
+				<script type="text/javascript">
+					registerChecker(5);
+				</script>
+
+				<div data-role="controlgroup" data-type="horizontal" data-inline="true" align="right">
+					<a data-rel="page" data-role="button" onclick="logout()">Log Out </a>
+				</div>
+			</div>
+
+			<div align="center">
+				<input type="search" name="searchValue" id="searchValue" onkeyup="displayunicode(event)">
+				<img width="" height="" src="../image/service.png"/>
+			</div>
+			<div align="center"  class="home_tagline">
+				Service sharing from anywhere
+
+				<a data-role="button" onclick="account()"> Account </a>
+				<a data-role="button" href="../view/categories.html"> Browse by category </a>
+				<a data-role="button" href="../view/sellItem.html"> Sell an item </a>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>shipping for selling</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<link rel="stylesheet" href="../../css/jquery.mobile-1.3.1.css" />
+		<link  rel="stylesheet" type="text/css" href="../../css/custom.css"/>
+		<script src="../../js/jquery-1.10.2.js"></script>
+		<script src="../../js/jquery.mobile-1.3.1.js"></script>
+		<script src="../../appjs/item.js"></script>
+		<script src="../../appjs/app.js"></script>
+	</head>
+	<body>
+
+		<div id ="" data-role="page">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<a data-role="button" data-rel="back"> Back </a>
+				<h1 id = "">Shipping Info</h1>
+			</div>
+
+			<div data-role="content" data-inset="true">
+				<form>
+				<label>Ship to:</label>
+				<select class="inputLayout" id="countryCode" name="countryCode" size="1">
+           
+	            <option value="WorldWide"> WorldWide
+	
+	            </option><option value="AF"> Afghanistan
+	
+	            </option><option value="AL"> Albania
+	
+	            </option><option value="DZ"> Algeria
+	
+	            </option><option value="AO"> Angola
+	
+	            </option><option value="AI"> Anguilla
+	
+	            </option><option value="AG"> Antigua
+	
+	            </option><option value="AR"> Argentina
+	
+	            </option><option value="AW"> Aruba
+	
+	            </option><option value="AU"> Australia
+	
+	            </option><option value="AT"> Austria
+	
+	            </option><option value="BS"> Bahamas
+	
+	            </option><option value="BH"> Bahrain
+	
+	            </option><option value="BD"> Bangladesh
+	
+	            </option><option value="BB"> Barbados
+	
+	            </option><option value="BE"> Belgium
+	
+	            </option><option value="BZ"> Belize
+	
+	            </option><option value="BJ"> Benin
+	
+	            </option><option value="BM"> Bermuda
+	
+	            </option><option value="BO"> Bolivia
+	
+	            </option><option value="XB"> Bonaire
+	
+	            </option><option value="BA"> Bosnia and Herzegovina
+	
+	            </option><option value="BW"> Botswana
+	
+	            </option><option value="BR"> Brazil
+	
+	            </option><option value="BG"> Bulgaria
+	
+	            </option><option value="BF"> Burkina Faso
+	
+	            </option><option value="KH"> Cambodia
+	
+	            </option><option value="CM"> Cameroon
+	
+	            </option><option value="CA"> Canada
+	
+	            </option><option value="KY"> Cayman Islands
+	
+	            </option><option value="CL"> Chile
+	
+	            </option><option value="CN"> China
+	
+	            </option><option value="CO"> Colombia
+	
+	            </option><option value="CG"> Congo
+	
+	            </option><option value="CR"> Costa Rica
+	
+	            </option><option value="CI"> Cote d'Ivoire
+	
+	            </option><option value="HR"> Croatia
+	
+	            </option><option value="XC"> Curacao
+	
+	            </option><option value="CY"> Cyprus
+	
+	            </option><option value="CZ"> Czech Republic
+	
+	            </option><option value="CD"> Democratic Republic of Congo
+	
+	            </option><option value="DK"> Denmark
+	
+	            </option><option value="DM"> Dominica
+	
+	            </option><option value="DO"> Dominican Republic
+	
+	            </option><option value="ET"> ETHIOPIA
+	
+	            </option><option value="EC"> Ecuador
+	
+	            </option><option value="EG"> Egypt
+	
+	            </option><option value="SV"> El Salvador
+	
+	            </option><option value="EE"> Estonia
+	
+	            </option><option value="FJ"> Fiji
+	
+	            </option><option value="FI"> Finland
+	
+	            </option><option value="FR"> France
+	
+	            </option><option value="GA"> Gabon
+	
+	            </option><option value="DE"> Germany
+	
+	            </option><option value="GH"> Ghana
+	
+	            </option><option value="GR"> Greece
+	
+	            </option><option value="GD"> Grenada
+	
+	            </option><option value="GP"> Guadeloupe
+	
+	            </option><option value="GU"> Guam
+	
+	            </option><option value="GT"> Guatemala
+	
+	            </option><option value="GN"> Guinea
+	
+	            </option><option value="GY"> Guyana (British)
+	
+	            </option><option value="GF"> Guyana (French)
+	
+	            </option><option value="HT"> Haiti
+	
+	            </option><option value="HN"> Honduras
+	
+	            </option><option value="HK"> Hong Kong
+	
+	            </option><option value="HU"> Hungary
+	
+	            </option><option value="IS"> Iceland
+	
+	            </option><option value="IN"> India
+	
+	            </option><option value="ID"> Indonesia
+	
+	            </option><option value="IR"> Iran
+	
+	            </option><option value="IQ"> Iraq
+	
+	            </option><option value="IE"> Ireland, Republic Of
+	
+	            </option><option value="IL"> Israel
+	
+	            </option><option value="IT"> Italy
+	
+	            </option><option value="JM"> Jamaica
+	
+	            </option><option value="JP"> Japan
+	
+	            </option><option value="JO"> Jordan
+	
+	            </option><option value="KZ"> Kazakhstan
+	
+	            </option><option value="KE"> Kenya
+	
+	            </option><option value="KR"> Korea, Republic Of
+	
+	            </option><option value="KW"> Kuwait
+	
+	            </option><option value="LA"> Laos
+	
+	            </option><option value="LV"> Latvia
+	
+	            </option><option value="LB"> Lebanon
+	
+	            </option><option value="LS"> Lesotho
+	
+	            </option><option value="LY"> Libya
+	
+	            </option><option value="LT"> Lithuania
+	
+	            </option><option value="LU"> Luxembourg
+	
+	            </option><option value="MO"> Macau
+	
+	            </option><option value="MK"> Macedonia
+	
+	            </option><option value="MG"> Madagascar
+	
+	            </option><option value="MW"> Malawi
+	
+	            </option><option value="MY"> Malaysia
+	
+	            </option><option value="ML"> Mali
+	
+	            </option><option value="MT"> Malta
+	
+	            </option><option value="MQ"> Martinique
+	
+	            </option><option value="MU"> Mauritius
+	
+	            </option><option value="MX"> Mexico
+	
+	            </option><option value="MS"> Montserrat
+	
+	            </option><option value="MA"> Morocco
+	
+	            </option><option value="MZ"> Mozambique
+	
+	            </option><option value="MM"> Myanmar
+	
+	            </option><option value="NA"> Namibia
+	
+	            </option><option value="NP"> Nepal
+	
+	            </option><option value="NL"> Netherlands
+	
+	            </option><option value="XN"> Nevis
+	
+	            </option><option value="NZ"> New Zealand
+	
+	            </option><option value="NI"> Nicaragua
+	
+	            </option><option value="NE"> Niger
+	
+	            </option><option value="NG"> Nigeria
+	
+	            </option><option value="NO"> Norway
+	
+	            </option><option value="OM"> Oman
+	
+	            </option><option value="PK"> Pakistan
+	
+	            </option><option value="PA"> Panama
+	
+	            </option><option value="PG"> Papua New Guinea
+	
+	            </option><option value="PY"> Paraguay
+	
+	            </option><option value="PE"> Peru
+	
+	            </option><option value="PH"> Philippines
+	
+	            </option><option value="PL"> Poland
+	
+	            </option><option value="PT"> Portugal
+	
+	            </option><option value="PR"> Puerto Rico
+	
+	            </option><option value="QA"> Qatar
+	
+	            </option><option value="RE"> Reunion Islands
+	
+	            </option><option value="RO"> Romania
+	
+	            </option><option value="RU"> Russian Federation The
+	
+	            </option><option value="SA"> Saudi Arabia
+	
+	            </option><option value="SN"> Senegal
+	
+	            </option><option value="RS"> Serbia
+	
+	            </option><option value="SC"> Seychelles
+	
+	            </option><option value="SL"> Sierra Leone
+	
+	            </option><option value="SG"> Singapore
+	
+	            </option><option value="SK"> Slovak Republic
+	
+	            </option><option value="SI"> Slovenia
+	
+	            </option><option value="ZA"> South Africa
+	
+	            </option><option value="ES"> Spain
+	
+	            </option><option value="LK"> Sri Lanka
+	
+	            </option><option value="XY"> St Barthelem
+	
+	            </option><option value="XE"> St Eustatius
+	
+	            </option><option value="KN"> St Kitts
+	
+	            </option><option value="LC"> St Lucia
+	
+	            </option><option value="VC"> St Vincent
+	
+	            </option><option value="XM"> St. Maarten
+	
+	            </option><option value="SD"> Sudan
+	
+	            </option><option value="SR"> Suriname
+	
+	            </option><option value="SZ"> Swaziland
+	
+	            </option><option value="SE"> Sweden
+	
+	            </option><option value="CH"> Switzerland
+	
+	            </option><option value="SY"> Syria
+	
+	            </option><option value="TW"> Taiwan
+	
+	            </option><option value="TZ"> Tanzania
+	
+	            </option><option value="TH"> Thailand
+	
+	            </option><option value="TG"> Togo
+	
+	            </option><option value="TT"> Trinidad and Tobago
+	
+	            </option><option value="TR"> Turkey
+	
+	            </option><option value="TC"> Turks and Caicos Islands
+	
+	            </option><option value="UG"> Uganda
+	
+	            </option><option value="UA"> Ukraine
+	
+	            </option><option value="AE"> United Arab Emirates
+	
+	            </option><option value="GB"> United Kingdom
+	
+	            </option><option value="UY"> Uruguay
+	
+	            </option><option value="VE"> Venezuela
+	
+	            </option><option value="VN"> Vietnam
+	
+	            </option><option value="VG"> Virgin Islands (British)
+	
+	            </option><option value="VI"> Virgin Islands (US)
+	
+	            </option><option value="YE"> Yemen
+	
+	            </option><option value="ZM"> Zambia
+	
+	            </option><option value="ZW"> Zimbabwe
+	
+	            </option></select>
+	       </form>
+           <form>		
+				<br />	
+				<hr />				
+				<label>Ship from:</label>
+				<select class="inputLayout" name="countryCode" size="1">
+          
+	            <option value="None"> None Selected
+	
+	            </option><option value="AF"> Afghanistan
+	
+	            </option><option value="AL"> Albania
+	
+	            </option><option value="DZ"> Algeria
+	
+	            </option><option value="AO"> Angola
+	
+	            </option><option value="AI"> Anguilla
+	
+	            </option><option value="AG"> Antigua
+	
+	            </option><option value="AR"> Argentina
+	
+	            </option><option value="AW"> Aruba
+	
+	            </option><option value="AU"> Australia
+	
+	            </option><option value="AT"> Austria
+	
+	            </option><option value="BS"> Bahamas
+	
+	            </option><option value="BH"> Bahrain
+	
+	            </option><option value="BD"> Bangladesh
+	
+	            </option><option value="BB"> Barbados
+	
+	            </option><option value="BE"> Belgium
+	
+	            </option><option value="BZ"> Belize
+	
+	            </option><option value="BJ"> Benin
+	
+	            </option><option value="BM"> Bermuda
+	
+	            </option><option value="BO"> Bolivia
+	
+	            </option><option value="XB"> Bonaire
+	
+	            </option><option value="BA"> Bosnia and Herzegovina
+	
+	            </option><option value="BW"> Botswana
+	
+	            </option><option value="BR"> Brazil
+	
+	            </option><option value="BG"> Bulgaria
+	
+	            </option><option value="BF"> Burkina Faso
+	
+	            </option><option value="KH"> Cambodia
+	
+	            </option><option value="CM"> Cameroon
+	
+	            </option><option value="CA"> Canada
+	
+	            </option><option value="KY"> Cayman Islands
+	
+	            </option><option value="CL"> Chile
+	
+	            </option><option value="CN"> China
+	
+	            </option><option value="CO"> Colombia
+	
+	            </option><option value="CG"> Congo
+	
+	            </option><option value="CR"> Costa Rica
+	
+	            </option><option value="CI"> Cote d'Ivoire
+	
+	            </option><option value="HR"> Croatia
+	
+	            </option><option value="XC"> Curacao
+	
+	            </option><option value="CY"> Cyprus
+	
+	            </option><option value="CZ"> Czech Republic
+	
+	            </option><option value="CD"> Democratic Republic of Congo
+	
+	            </option><option value="DK"> Denmark
+	
+	            </option><option value="DM"> Dominica
+	
+	            </option><option value="DO"> Dominican Republic
+	
+	            </option><option value="ET"> ETHIOPIA
+	
+	            </option><option value="EC"> Ecuador
+	
+	            </option><option value="EG"> Egypt
+	
+	            </option><option value="SV"> El Salvador
+	
+	            </option><option value="EE"> Estonia
+	
+	            </option><option value="FJ"> Fiji
+	
+	            </option><option value="FI"> Finland
+	
+	            </option><option value="FR"> France
+	
+	            </option><option value="GA"> Gabon
+	
+	            </option><option value="DE"> Germany
+	
+	            </option><option value="GH"> Ghana
+	
+	            </option><option value="GR"> Greece
+	
+	            </option><option value="GD"> Grenada
+	
+	            </option><option value="GP"> Guadeloupe
+	
+	            </option><option value="GU"> Guam
+	
+	            </option><option value="GT"> Guatemala
+	
+	            </option><option value="GN"> Guinea
+	
+	            </option><option value="GY"> Guyana (British)
+	
+	            </option><option value="GF"> Guyana (French)
+	
+	            </option><option value="HT"> Haiti
+	
+	            </option><option value="HN"> Honduras
+	
+	            </option><option value="HK"> Hong Kong
+	
+	            </option><option value="HU"> Hungary
+	
+	            </option><option value="IS"> Iceland
+	
+	            </option><option value="IN"> India
+	
+	            </option><option value="ID"> Indonesia
+	
+	            </option><option value="IR"> Iran
+	
+	            </option><option value="IQ"> Iraq
+	
+	            </option><option value="IE"> Ireland, Republic Of
+	
+	            </option><option value="IL"> Israel
+	
+	            </option><option value="IT"> Italy
+	
+	            </option><option value="JM"> Jamaica
+	
+	            </option><option value="JP"> Japan
+	
+	            </option><option value="JO"> Jordan
+	
+	            </option><option value="KZ"> Kazakhstan
+	
+	            </option><option value="KE"> Kenya
+	
+	            </option><option value="KR"> Korea, Republic Of
+	
+	            </option><option value="KW"> Kuwait
+	
+	            </option><option value="LA"> Laos
+	
+	            </option><option value="LV"> Latvia
+	
+	            </option><option value="LB"> Lebanon
+	
+	            </option><option value="LS"> Lesotho
+	
+	            </option><option value="LY"> Libya
+	
+	            </option><option value="LT"> Lithuania
+	
+	            </option><option value="LU"> Luxembourg
+	
+	            </option><option value="MO"> Macau
+	
+	            </option><option value="MK"> Macedonia
+	
+	            </option><option value="MG"> Madagascar
+	
+	            </option><option value="MW"> Malawi
+	
+	            </option><option value="MY"> Malaysia
+	
+	            </option><option value="ML"> Mali
+	
+	            </option><option value="MT"> Malta
+	
+	            </option><option value="MQ"> Martinique
+	
+	            </option><option value="MU"> Mauritius
+	
+	            </option><option value="MX"> Mexico
+	
+	            </option><option value="MS"> Montserrat
+	
+	            </option><option value="MA"> Morocco
+	
+	            </option><option value="MZ"> Mozambique
+	
+	            </option><option value="MM"> Myanmar
+	
+	            </option><option value="NA"> Namibia
+	
+	            </option><option value="NP"> Nepal
+	
+	            </option><option value="NL"> Netherlands
+	
+	            </option><option value="XN"> Nevis
+	
+	            </option><option value="NZ"> New Zealand
+	
+	            </option><option value="NI"> Nicaragua
+	
+	            </option><option value="NE"> Niger
+	
+	            </option><option value="NG"> Nigeria
+	
+	            </option><option value="NO"> Norway
+	
+	            </option><option value="OM"> Oman
+	
+	            </option><option value="PK"> Pakistan
+	
+	            </option><option value="PA"> Panama
+	
+	            </option><option value="PG"> Papua New Guinea
+	
+	            </option><option value="PY"> Paraguay
+	
+	            </option><option value="PE"> Peru
+	
+	            </option><option value="PH"> Philippines
+	
+	            </option><option value="PL"> Poland
+	
+	            </option><option value="PT"> Portugal
+	
+	            </option><option value="PR"> Puerto Rico
+	
+	            </option><option value="QA"> Qatar
+	
+	            </option><option value="RE"> Reunion Islands
+	
+	            </option><option value="RO"> Romania
+	
+	            </option><option value="RU"> Russian Federation The
+	
+	            </option><option value="SA"> Saudi Arabia
+	
+	            </option><option value="SN"> Senegal
+	
+	            </option><option value="RS"> Serbia
+	
+	            </option><option value="SC"> Seychelles
+	
+	            </option><option value="SL"> Sierra Leone
+	
+	            </option><option value="SG"> Singapore
+	
+	            </option><option value="SK"> Slovak Republic
+	
+	            </option><option value="SI"> Slovenia
+	
+	            </option><option value="ZA"> South Africa
+	
+	            </option><option value="ES"> Spain
+	
+	            </option><option value="LK"> Sri Lanka
+	
+	            </option><option value="XY"> St Barthelem
+	
+	            </option><option value="XE"> St Eustatius
+	
+	            </option><option value="KN"> St Kitts
+	
+	            </option><option value="LC"> St Lucia
+	
+	            </option><option value="VC"> St Vincent
+	
+	            </option><option value="XM"> St. Maarten
+	
+	            </option><option value="SD"> Sudan
+	
+	            </option><option value="SR"> Suriname
+	
+	            </option><option value="SZ"> Swaziland
+	
+	            </option><option value="SE"> Sweden
+	
+	            </option><option value="CH"> Switzerland
+	
+	            </option><option value="SY"> Syria
+	
+	            </option><option value="TW"> Taiwan
+	
+	            </option><option value="TZ"> Tanzania
+	
+	            </option><option value="TH"> Thailand
+	
+	            </option><option value="TG"> Togo
+	
+	            </option><option value="TT"> Trinidad and Tobago
+	
+	            </option><option value="TR"> Turkey
+	
+	            </option><option value="TC"> Turks and Caicos Islands
+	
+	            </option><option value="UG"> Uganda
+	
+	            </option><option value="UA"> Ukraine
+	
+	            </option><option value="AE"> United Arab Emirates
+	
+	            </option><option value="GB"> United Kingdom
+	
+	            </option><option value="UY"> Uruguay
+	
+	            </option><option value="VE"> Venezuela
+	
+	            </option><option value="VN"> Vietnam
+	
+	            </option><option value="VG"> Virgin Islands (British)
+	
+	            </option><option value="VI"> Virgin Islands (US)
+	
+	            </option><option value="YE"> Yemen
+	
+	            </option><option value="ZM"> Zambia
+	
+	            </option><option value="ZW"> Zimbabwe
+	
+	            </option></select>
+	         </form>
+	         <form>   
+	            <br />	
+				<hr />				
+				<label>Shipping Service:</label>	
+				<select id="serviceCode" name="serviceCode" size="1" >	
+					<option value="NotSelected">-
+					</option>
+					<optgroup label="Economy services">	
+					<option value="FedExSmartPost">FedEx SmartPost (2 to 8 business days)</option>
+					<option value="USPSParcel">USPS Parcel Select (2 to 9 business days)</option>
+					<option value="USPSStandardPost">USPS Standard Post (2 to 9 business days)</option>
+					<option value="USPSMedia">USPS Media Mail (2 to 8 business days)</option>
+					</optgroup>
+					<optgroup label="Standard services">
+					<option value="UPSGround">UPS Ground (1 to 5 business days)</option>
+					<option value="USPSFirstClass" selected="selected">USPS First Class Package (2 to 5 business days)</option>
+					<option value="FedExHomeDelivery">FedEx Ground or FedEx Home Delivery (1 to 5 business days)</option>
+					</optgroup><optgroup label="Expedited services">
+					<option value="USPSPriority">USPS Priority Mail (1 to 3 business days)</option>
+					<option value="USPSPriorityFlatRateEnvelope">USPS Priority Mail Flat Rate Envelope (1 to 3 business days)</option>
+					<option value="USPSPriorityMailSmallFlatRateBox">USPS Priority Mail Small Flat Rate Box (1 to 3 business days)</option>
+					<option value="USPSPriorityFlatRateBox">USPS Priority Mail Medium Flat Rate Box (1 to 3 business days)</option>	
+					<option value="USPSPriorityMailLargeFlatRateBox">USPS Priority Mail Large Flat Rate Box (1 to 3 business days)</option>	
+					<option value="USPSPriorityMailPaddedFlatRateEnvelope">USPS Priority Mail Padded Flat Rate Envelope (1 to 3 business days)</option>
+					<option value="USPSPriorityMailLegalFlatRateEnvelope">USPS Priority Mail Legal Flat Rate Envelope (1 to 3 business days)</option>
+					<option value="UPS3rdDay">UPS 3 Day Select (3 business days)</option>
+					<option value="UPS2ndDay">UPS 2nd Day Air (2 business days)</option>
+					<option value="FedExExpressSaver">FedEx Express Saver (1 to 3 business days)</option>	
+					<option value="FedEx2Day">FedEx 2Day (1 to 2 business days)</option>
+					</optgroup><optgroup label="One-day services">	
+					<option value="USPSExpressMail">USPS Priority Mail Express (1 business day)</option>	
+					<option value="USPSExpressFlatRateEnvelope">USPS Priority Mail Express Flat Rate Envelope (1 business day)</option>	
+					<option value="USPSExpressMailLegalFlatRateEnvelope">USPS Priority Mail Express Legal Flat Rate Envelope (1 business day)</option>	
+					<option value="UPSNextDay">UPS Next Day Air Saver (1 business day)</option>	<option value="UPSNextDayAir">UPS Next Day Air (1 business day)</option>	
+					<option value="FedExPriorityOvernight">FedEx Priority Overnight (1 business day)</option>	
+					<option value="FedExStandardOvernight">FedEx Standard Overnight (1 business day)</option>
+					</optgroup>
+					</select>
+					<br />
+					<hr />				
+					<label>Shipping Price:</label>	
+					<input align="left"  type="number" id="itemShippingPrice" placeholder="Shipping Price"  />
+					<input type="button" onclick="getShippingInfo4Sell(document.forms[0].countryCode.value,document.forms[1].countryCode.value,document.forms[2].serviceCode.value)" data-inline="true" data-theme="b" value="Done"/>
+				</form>
+			</div>
+		</div>
+
+	</body>
+</html>

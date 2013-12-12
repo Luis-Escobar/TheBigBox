@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Seller</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/jquery.mobile-1.3.1.css" />
+		<link  rel="stylesheet" type="text/css" href="../css/custom.css"/>
+		<script src="../js/jquery-1.10.2.js"></script>
+		<script src="../js/jquery.mobile-1.3.1.js"></script>
+		<script src="../appjs/item.js"></script>
+		<script src="../appjs/app.js"></script>
+		<script src="../raty/jquery.raty.min.js"></script>
+		<script src="../raty/jquery.raty.js"></script>
+	</head>
+	<body>
+		<!-- SellerPage -->
+		<div data-role="page" id="seller">
+		<div data-role="header" >
+			<a data-role="button" data-rel="back"> Back </a>
+				
+				<h1>Seller</h1>
+			</div>
+
+			<ul data-role = "listview" data-inset= "true">
+				<li>
+					<img src="../image/sellerIcon.png" class="ui-li-thumb">
+					<p id='seller_name'></p>
+					<p id='seller_info'><font color="gray">100% positive feedback<br />Member since 2005</font></p>
+				</li>
+				<li>
+					<a href="">Ask seller a question</a>
+				</li>
+				<li>
+					<a href="">Items for sale</a>
+				</li>
+				<li>
+					<a href="">Recent feedback</a>
+				</li>				
+			</ul>
+			<a data-theme="b" data-role="button" href="view/login.html"> Save this seller </a>
+		</div>
+
+	</body>
+
+</html>

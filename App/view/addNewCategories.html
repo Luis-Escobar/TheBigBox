@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Big Box Categories</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/jquery.mobile-1.3.1.css" />
+		<link  rel="stylesheet" type="text/css" href="../css/custom.css"/>
+		<script src="../js/jquery-1.10.2.js"></script>
+		<script src="../js/jquery.mobile-1.3.1.js"></script>
+		<script src="../appjs/item.js"></script>
+		<script src="../appjs/app.js"></script>
+		<script src="../raty/jquery.raty.min.js"></script>
+		<script src="../raty/jquery.raty.js"></script>
+	</head>
+	<body>
+		<!-- homepage -->
+		<div data-role="page" id="changeCategories">
+			<div data-role="header" >
+				<a data-role="button" data-rel="back"> Back </a>
+				<h1>Add Categories</h1>
+			</div>
+			
+
+					<SCRIPT language="javascript">
+					var nextId = 0;
+					//No va a estar aqui es por testing
+	
+	 var intId = 0;
+	 var intId2 = 0;
+	 var intId3 = 0;
+	 
+        function add(type) {
+           
+          
+          	if(type == "category"){
+          		 ///intId = $("#DynamicForm div").length + 1;
+          		 ++intId;
+          		 intId2= 0;
+          		 intId3 = 0;
+          		 var fieldWrapper = $("<div align= 'left' class='fieldwrapper' id='fieldC" + intId + "'/>");
+          		 $("#subcategory").removeAttr('disabled');
+          		 $("#2subcategory").attr("disabled","disabled");
+          		 //$("#subcategory").attr("disabled","disabled");
+             	 //$("#2subcategory").removeAttr('disabled');
+          	}
+          	else if(type == "subcategory"){
+          		
+          		 ++intId2;
+          		 intId3 = 0;
+          		 var fieldWrapper = $("<div align= 'center' class='fieldwrapper' id='fieldS" + intId+""+intId2 + "'/>");
+          		 $("#2subcategory").removeAttr('disabled');
+          	}
+          	else{
+          		++intId3;
+          		var fieldWrapper = $("<div align= 'right' class='fieldwrapper' id='fieldSS" + intId+""+intId2 +""+intId3 + "'/>");
+          	}
+            var inputBar = $("<input placeholder='"+type+"' type='text' name='"+type+"' class='required' />");
+            var removeButton = $("<input type='radio' class='remove'  />");
+            removeButton.click(function() {
+            
+            	if($(this).parent().attr("id").charAt(5)=="C")
+            	{
+            		
+          			 for(var i = 1; i<= 10 ;i++){
+          			 	for(var j = 1; j<= 10 ;j++){
+            				if(document.getElementById("fieldSS"+$(this).parent().attr("id").charAt(6)+""+i+""+j) != null){
+            					$('#fieldSS'+$(this).parent().attr("id").charAt(6)+""+i+""+j).remove();
+            					intId3 = 0;
+            				}
+            				//else{break;}
+            		  	}
+            		  	
+            		  if(document.getElementById("fieldS"+$(this).parent().attr("id").charAt(6)+""+i) != null){
+            				$('#fieldS'+$(this).parent().attr("id").charAt(6)+""+i).remove();
+            				intId2 = 0;
+            			}
+            		 	//else{break;}
+            		 	
+            		}	
+            		intId--;
+            	
+            		 $("#subcategory").removeAttr('disabled');
+          			 $("#2subcategory").attr("disabled","disabled");
+          			 
+            	}
+            	else if($(this).parent().attr("id").charAt(5)=="S")
+            	{
+            		
+          			 
+          			 	for(var j = 1; j<= 50 ;j++){
+            				if(document.getElementById("fieldSS"+$(this).parent().attr("id").charAt(6)+""+$(this).parent().attr("id").charAt(7)+""+j) != null){
+            					$('#fieldSS'+$(this).parent().attr("id").charAt(6)+""+$(this).parent().attr("id").charAt(7)+""+j).remove();
+            					intId3 = 0;
+            				}
+            				//else{break;}
+            		  	
+            		}	
+            		
+            		 $("#subcategory").removeAttr('disabled');
+          			 $("#2subcategory").attr("disabled","disabled");
+            	}
+            	
+            	 //alert($(this).parent().attr("id"));
+            	if(intId==1){
+            	
+            	//$("#category").selected=true;
+            	//refresh and force rebuild
+				//$( "#category option:selected" );
+            	$("#subcategory").attr("disabled","disabled");
+          		$("#2subcategory").attr("disabled","disabled");
+          		//$("#select").selectmenu("refresh");
+          		
+          		}
+            	//alert($(this).parent().attr("id").charAt(5));
+            	//alert($(this).parent().attr("id"));
+            	//alert(document.getElementById("fieldS1"));
+            	/*if(document.getElementById("fieldS1")!=null)
+            	{
+            		$('#fieldS1').remove();
+            		//document.getElementById("fieldS1").remove();
+            	}
+            	else{alert(false);}
+            	*/
+            	//document.getElementById("fieldS1").remove();
+            	
+                $(this).parent().remove();
+            }); 
+            fieldWrapper.append(inputBar);
+            fieldWrapper.append(removeButton);
+            
+            
+           
+            $("#config").append(fieldWrapper);
+        };
+
+var categoryFormArray;
+var parseArrayName = new Array();
+var parseArrayDesignation = new Array();
+   function myFunction()
+{
+		var x = document.getElementById("config");
+		var txt = "";
+		
+		
+		
+		
+		for (var i=0;i<x.length;i++)
+  		{
+  			if(x.elements[i].value!="on"){
+  				//txt = txt + x.elements[i].value +" "+ x.elements[i].placeholder+"<br>";
+  				if(x.elements[i].placeholder == "category"){
+  					
+  					if(i>0){
+  						
+  						if(x.elements[i-2].placeholder == "subcategory")
+  							txt = txt+"),";
+  						else if(x.elements[i-2].placeholder == "2nd subcategory")
+  							txt = txt +"},),";
+  					}
+  					txt = txt+ x.elements[i].value +"," ;
+  				}
+  				else if(x.elements[i].placeholder == "subcategory"){
+  					if(x.elements[i-2].placeholder == "category")
+  						txt = txt+"(,";
+  					if(x.elements[i-2].placeholder == "2nd subcategory")
+  						txt = txt+"},";
+  					txt = txt+ x.elements[i].value +"," ;
+  				}
+  				else if(x.elements[i].placeholder == "2nd subcategory"){
+  					if(x.elements[i-2].placeholder == "subcategory")
+  						txt = txt+"{,";
+  					txt = txt+ x.elements[i].value +"," ;
+  					
+  				}
+  				
+  			}
+ 		 
+ 		 }
+ 		 if(x.length>2){
+  						
+  			if(x.elements[i-2].placeholder == "subcategory")
+  				txt = txt+"),";
+  			else if(x.elements[i-2].placeholder == "2nd subcategory")
+  				txt = txt +"},),";
+  		}
+  		
+		categoryFormArray=txt.split(",");
+		//var form = $("#address-form");
+ 		//var formData = categoryFormArray.serializeArray();
+ 		//alert("form Data: " + formData);
+ 		//var newAddress = ConverToJSON(categoryFormArray);
+ 		//alert("New categories: " + JSON.stringify(categoryFormArray));
+		//var newCategoriesJSON = JSON.stringify(categoryFormArray);
+		
+		/*
+  		for(var i = 0 ; i< categoryFormArray.length ; i++)
+  		{			
+  			if(categoryFormArray[i]!="(" && categoryFormArray[i]!=")" && categoryFormArray[i]!="{" && categoryFormArray[i]!="}"){
+  				parseArrayName[count++] = ""+categoryFormArray[i];
+  			}
+  		}*/
+  		var count = 0;
+  		var count2 = 0;
+  		var stateS = false;
+  		var stateSS = false;
+  		for(var i = 0 ; i< categoryFormArray.length-1 ; i++)
+  		{	//alert(categoryFormArray[i]);		
+  			if(categoryFormArray[i]=="(" ){
+  				stateS = true;
+  			}
+  			else if(categoryFormArray[i]==")" ){
+  				stateS = false;
+  			}
+  			else if(categoryFormArray[i]=="{" ){
+  				stateSS = true;
+  			}
+  			else if(categoryFormArray[i]=="}" ){
+  				stateSS = false;
+  			}
+  			else{
+  				if(stateS == false && stateSS == false){
+  					parseArrayDesignation[count2++] = "category";
+  				}
+  				if(stateS == true && stateSS == false){
+  					parseArrayDesignation[count2++] = "subcategory";
+  				}
+  				if(stateS == true && stateSS == true){
+  					parseArrayDesignation[count2++] = "subsubcategory";
+  				}
+  				parseArrayName[count++] = ""+categoryFormArray[i];
+  			}
+  		}
+  		/*for(var i = 0 ; i< parseArrayName.length ; i++)
+  		{
+  			alert(parseArrayName[i]+"<-"+parseArrayDesignation[i]);
+  		}
+  		*/
+			
+		//parseCategoryArray(txt);	
+		AddCategoriesForm();
+		document.getElementById("demo").innerHTML=txt;
+		
+		
+}	
+	
+		
+		
+function AddCategoriesForm() {
+	$.mobile.loading("show");
+	//alert("HERE");
+	twoArray = {};
+	twoArray.parseArrayName = parseArrayName;
+	twoArray.parseArrayDesignation = parseArrayDesignation;
+	var sendArray = JSON.stringify(twoArray);
+	//alert(twoArray.parseArrayName[0]);
+	//alert(twoArray.parseArrayName[1]);
+	
+	$.ajax({
+		
+		url : "http://bigbox.herokuapp.com/BigBoxServer/categoryForm",
+		type : 'post',
+		data : sendArray,
+		contentType : "application/json",
+		dataType : "json",
+		success : function(data, textStatus, jqXHR) {
+			$.mobile.loading("hide");
+			alert("Sucess");
+		},
+		error : function(data, textStatus, jqXHR) {
+			console.log("textStatus: " + textStatus);
+			$.mobile.loading("hide");
+			alert("Category could not be added!");
+		}
+	});
+
+}
+		
+		
+
+    
+
+						
+					</SCRIPT>
+					
+				
+					
+					<FORM>
+						
+						<H2>Dynamically add new category.</H2>
+						<SELECT id="select" name="element" >
+							<OPTION id="category" value="category">Category</OPTION>
+							<OPTION id="subcategory" value="subcategory"disabled >Subcategory</OPTION>
+							<OPTION id="2subcategory" value="2nd subcategory"disabled>Second Subcategory</OPTION>
+						</SELECT>
+
+					</FORM>	
+						<div id="inputBar" align="center"></div>
+						<input type="button" value="Add a field" onclick="add(document.forms[0].element.value)">
+
+						
+					<form id="config" method="post" action="config.php" >    					
+  						
+					</form>
+					  	<input type="button" onclick="myFunction()" value="Submit form">
+						<p id="demo"></p>
+					
+			
+	</body>
+</html>
